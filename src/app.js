@@ -1,23 +1,29 @@
- console.log('App.js is running!');
+import React from 'react'
+import {createRoot} from 'react-dom/client'
 
- var template = (
-   <div>
-     <h1>It changedddddd</h1> 
-     <p>siuuu</p>
-     <ol>
-        <li>Item One</li>
-        <li>Item Two</li>
-     </ol>
-   </div>
-);
+console.log('App.js is running!')
+
+var user = {
+  age: 21, 
+}
+
+function getLocation(location) {
+  if (location) {
+      return Location;
+}  else {
+  return <p>Location: {location}</p>
+}
+}
 
 var myName = (
-  <div>
-    <h1>Huy Nguyen</h1>
-    <p>Age: 21</p>
-    <p>Location: Helsinki</p>
-  </div>
-);
- var appRoot = document.getElementById('app');
+<div>
+  <h1>{user.name ? user.name : 'Anonymous'}</h1>
+  <p>Age: {user.age}</p>
+  {getLocation(user.location)}
+</div>
+)
 
- ReactDOM.render(template, appRoot, myName);
+// Render your React component instead
+const root = createRoot(document.getElementById('app'))
+
+root.render(myName)
