@@ -2,8 +2,6 @@ import React from 'react'
 import {createRoot} from 'react-dom/client'
 import './src/playground/es6-arrow-function'
 
-console.log('App.js is running!')
-
 const cham = {
   title: 'Real',
   subtitle: 'Fake',
@@ -22,24 +20,24 @@ const template = (
   </div>
 )
 
-const user = {  
-  age: 21, 
+const user = {
+  age: 21,
 }
 
 function getLocation(location) {
   if (location) {
-      return Location;
-}  else {
-  return <p>Location: {location}</p>
-}
+    return Location
+  } else {
+    return <p>Location: {location}</p>
+  }
 }
 
 const myName = (
-<div>
-  <h1>{user.name ? user.name : 'Anonymous'}</h1>
-  {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
-  {getLocation(user.location)}
-</div>
+  <div>
+    <h1>{user.name ? user.name : 'Anonymous'}</h1>
+    {user.age && user.age >= 18 && <p>Age: {user.age}</p>}
+    {getLocation(user.location)}
+  </div>
 )
 const root = createRoot(document.getElementById('app'))
 
