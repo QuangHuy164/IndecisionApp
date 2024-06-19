@@ -1,20 +1,16 @@
 import React, {useState} from 'react'
 
 const Button = () => {
-  const [visibility, setVisibility] = useState(true)
-  const press = () => {
-    if (visibility === false) {
-        setVisibility(true)
-    } else {
-        setVisibility(false)
-    }
+  const [colorButton, setColor] = useState('red')
+  const redColor = () => {
+    setColor('red')
   }
 
   return (
     <div>
-        {visibility === true ? <p>something</p> : null}
-      
-      <button onClick={press}>{visibility === true ? 'Hide' : 'Show'}</button>
+      <button onClick={redColor}>
+        Show me
+      </button>
     </div>
   )
 }

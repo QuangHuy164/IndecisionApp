@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './components/Button'
+import './components/Button.css'
 
 export const a = 10
 
