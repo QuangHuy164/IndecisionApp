@@ -1,12 +1,21 @@
+import React from 'react'
 
-const render = () => {
-    const toggle = (
+export const renderToggle = (visibility, toggleVision) => {
+  const toggle = (
+    <div>
+      <h1>Toggle Vision</h1>
+      <button onClick={toggleVision}>
+
+        {visibility === true ? 'Hide Details' : 'Show Details'}
+
+      </button>
+
+      {visibility === true ? (
         <div>
-          <h1>Toggle Vision</h1>
-          <button>Show Details</button>
-        </div>        
-    );
-
-} 
-
-render()
+          <p>Here is something appear</p>
+        </div>
+      ) : null}
+    </div>
+  )
+  return toggle
+}
