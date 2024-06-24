@@ -1,14 +1,14 @@
 import React from 'react'
 import Button from './components/Button'
-import './components/Button.css'
+import ChangeName from './components/ChangeName'
 
-export const a = 10
+
 
 const App = () => {
   return (
     <div>
-      <Button />
-
+      {/* <Button /> */}
+<ChangeName/>
     </div>
   )
 }
