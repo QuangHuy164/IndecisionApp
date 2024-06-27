@@ -6,41 +6,42 @@
 import React, {useState} from 'react'
 
 const ColorList = () => {
-  const [color, setColor] = useState([1, 2, 3, 4, 5])
-  const [selectedIndex, setSelectedIndex] = useState(-1)
+  const [color, setColor] = useState([1, 2, 3, 4, 5]) 
+  const [selectedIndex, setSelectedIndex] = useState(-1) // the value -1 indicates that no element is selected
 
-  return (
+  return (  
     <>
       <ol>
-        {color.map((value, index) => {
+        {color.map((value, index) => { // 
           return (
-            <ColorListItem
-              key={index}
-              value={value}
-              index={index}
-              selectedIndex={selectedIndex}
-              updateSelectedIndex={setSelectedIndex}
+            <ColorListItem // import component ColorListItem
+              key={index} // key dung de biet dc value nao thay doi trong state
+              value={value} // value= la variable value trong map(), {value} la property cua ColorlistitemProps 
+              index={index} // index= la variable index, {index} la property cua ColorlistitemProps 
+              selectedIndex={selectedIndex} // selectedIndex la initial state, {selectedIndex} la property dc call trong ColorlistitemProps
+              updateSelectedIndex={setSelectedIndex} // updateSelectedIndex duoc call trong ColorlistitemProps, {setSelectedIndex} la function property
             />
           )
         })}
       </ol>
-      <button>Gray Button</button>
     </>
   )
 }
 
 export default ColorList
 
+// interface syntax. Dung de call Property 
 interface ColorListItemProps {
-  value: number
+  //property: type of property
+  value: number 
   index: number
   selectedIndex: number
-  updateSelectedIndex: (v: number) => void
+  updateSelectedIndex: (v: number) => void // call 1 function o trong property
 }
 
-const ColorListItem = (props: ColorListItemProps) => {
-  const onClick = () => {
-    props.updateSelectedIndex(props.index)
+const ColorListItem = (props: ColorListItemProps) => {  
+  const onClick = () => { 
+    props.updateSelectedIndex(props.index) // call function cua Colorproperty and passing 
   }
 
   //   if (props.selectedIndex === props.index ) {
@@ -71,7 +72,7 @@ const ColorListItem = (props: ColorListItemProps) => {
       <button
         onClick={onClick}
         style={{
-          backgroundColor: props.selectedIndex === props.index ? 'red' : 'gray'
+          backgroundColor: props.selectedIndex === props.index ? 'red' : 'gray' //inline conditional syntax: condition ? exprIfTrue : exprIfFalse
         }}>
         Item {props.value}
       </button>
