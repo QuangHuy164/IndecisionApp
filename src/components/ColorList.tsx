@@ -3,16 +3,16 @@
  * Props
  */
 
-import React, {useState} from 'react'
+/*import React, {useState} from 'react'
 
-const ColorList = () => {
-  const [color, setColor] = useState([1, 2, 3, 4, 5]) 
+const ColorList = () => { 
+  const [color, setColor] = useState([1, 2, 3, 4, 5])
   const [selectedIndex, setSelectedIndex] = useState(-1) // the value -1 indicates that no element is selected
 
   return (  
     <>
       <ol>
-        {color.map((value, index) => { // 
+        {color.map((value, index) => { // passing an array is color
           return (
             <ColorListItem // import component ColorListItem
               key={index} // key dung de biet dc value nao thay doi trong state
@@ -30,8 +30,8 @@ const ColorList = () => {
 
 export default ColorList
 
-// interface syntax. Dung de call Property 
-interface ColorListItemProps {
+// interface syntax. Dung de call Property
+/*interface ColorListItemProps {
   //property: type of property
   value: number 
   index: number
@@ -41,7 +41,7 @@ interface ColorListItemProps {
 
 const ColorListItem = (props: ColorListItemProps) => {  
   const onClick = () => { 
-    props.updateSelectedIndex(props.index) // call function cua Colorproperty and passing 
+    props.updateSelectedIndex(props.index) // call function cua Colorproperty va pass from parent component to child component,update the selected index base on provided index value
   }
 
   //   if (props.selectedIndex === props.index ) {
@@ -67,7 +67,7 @@ const ColorListItem = (props: ColorListItemProps) => {
   //     color = 'gray'
   //   }
 
-  return (
+  /*return (
     <li>
       <button
         onClick={onClick}

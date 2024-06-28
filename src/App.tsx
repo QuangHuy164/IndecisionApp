@@ -3,6 +3,7 @@ import ButtonCopy from './components/ButtonCopy'
 import ChangeName from './components/ChangeName'
 import FillText from './components/FillText'
 import ColorList from './components/ColorList'
+import ColorListCopy from './components/ColorListCopy'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <FillText />
       <ButtonCopy />
       <ColorList />
+      <ColorListCopy />
     </div>
   )
 }
