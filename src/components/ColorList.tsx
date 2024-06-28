@@ -3,7 +3,7 @@
  * Props
  */
 
-/*import React, {useState} from 'react'
+import React, {useState} from 'react'
 
 const ColorList = () => { 
   const [color, setColor] = useState([1, 2, 3, 4, 5])
@@ -31,7 +31,7 @@ const ColorList = () => {
 export default ColorList
 
 // interface syntax. Dung de call Property
-/*interface ColorListItemProps {
+interface ColorListItemProps {
   //property: type of property
   value: number 
   index: number
@@ -67,7 +67,7 @@ const ColorListItem = (props: ColorListItemProps) => {
   //     color = 'gray'
   //   }
 
-  /*return (
+  return (
     <li>
       <button
         onClick={onClick}
@@ -77,5 +77,5 @@ const ColorListItem = (props: ColorListItemProps) => {
         Item {props.value}
       </button>
     </li>
-  )
+) 
 }
