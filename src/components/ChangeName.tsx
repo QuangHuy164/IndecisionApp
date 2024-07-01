@@ -12,15 +12,16 @@ const ChangeName = () => {
     //create an array
 
     for (let i = 0; i < names.length; i++) {
-      //for loop:
+      //FOR LOOP:
       // sets a variable before the loop starts
       // defines the condition for the loop to run
       // increases a value (i++) each time the code block in the loop has been executed
 
+      //declare var name
       const name = names[i]
-      //declare var name 
 
       //copyNames.push(name)
+      
       //access an array
       copyNames[i] = name
     }
@@ -37,7 +38,7 @@ const ChangeName = () => {
         {names.map((value, index) => {
           //map passing the array
           return <li key={index}>{value}</li>
-          // keys help React identify which items have changed, added, removed. 
+          // keys help React identify which items have changed, added, removed.
         })}
       </ol>
       <button className="square" onClick={change}>

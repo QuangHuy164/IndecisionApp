@@ -1,36 +1,41 @@
 import React, {useState} from 'react'
 
 interface NameListProps {
-    value: number
-    index: number
-    selectedIndex: number
-    updateSelectedIndex: (v: number) => void
+  value: number
+  index: number
+  selectedIndex: number
+  updateSelectedIndex: (v: number) => void
+  newName: number
+  updateNewName: (index: number, newName: string) => void
+}
+
+const NameList = (props: NameListProps) => {
+  const onClick = () => {
+    props.updateSelectedIndex(props.index)
+    props.updateNewName(props.index,'Huy')
   }
-  
-  const NameList = (props: NameListProps) => {
-    const onClick = () => {
-      props.updateSelectedIndex(props.index)
-    }
-    return ( 
-        <>
+
+  return (
+    <>
       <li>
         <button
           style={{
-            backgroundColor: props.selectedIndex === props.index ? 'white' : 'gray'
-            
+            backgroundColor:
+              props.selectedIndex === props.index ? 'white' : 'gray'
           }}
           onClick={onClick}>
-          Name {props.value}
+           {props.newName === props.index ? 'Huy' : 'Name'} {props.value}
         </button>
       </li>
-      </>
-    )
-  }
- 
-  
+    </>
+  )
+}
+
 const ColorListCopy = () => {
   const [names, setNames] = useState([1, 2, 3, 4, 5])
   const [selectedIndex, setSelectedIndex] = useState(-1)
+  const [newName, setNewName] = useState(-1)
+
   return (
     <>
       <ol>
@@ -42,6 +47,8 @@ const ColorListCopy = () => {
               index={index}
               selectedIndex={selectedIndex}
               updateSelectedIndex={setSelectedIndex}
+              newName={newName}
+              updateNewName={setNewName}
             />
           )
         })}
@@ -51,4 +58,3 @@ const ColorListCopy = () => {
 }
 
 export default ColorListCopy
-
