@@ -12,7 +12,7 @@ interface NameListProps {
 const NameList = (props: NameListProps) => {
   const onClick = () => {
     props.updateSelectedIndex(props.index)
-    props.updateNewName(props.index,'Huy')
+    props.updateNewName(props.index,'')
   }
 
   return (
@@ -24,7 +24,7 @@ const NameList = (props: NameListProps) => {
               props.selectedIndex === props.index ? 'white' : 'gray'
           }}
           onClick={onClick}>
-           {props.newName === props.index ? 'Huy' : 'Name'} {props.value}
+           {props.newName === props.index ? 'Huy' : 'Name'} {props.value} 
         </button>
       </li>
     </>

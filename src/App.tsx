@@ -4,6 +4,8 @@ import ChangeName from './components/ChangeName'
 import FillText from './components/FillText'
 import ColorList from './components/ColorList'
 import ColorListCopy from './components/ColorListCopy'
+import UseEffect from './components/UseEffect'
+import OnOffUseEffect from './components/OnOffUseEffect'
 
 const App = () => {
   return (
@@ -14,6 +16,8 @@ const App = () => {
       <ButtonCopy />
       <ColorList />
       <ColorListCopy />
+      <UseEffect />
+      <OnOffUseEffect />
     </div>
   )
 }

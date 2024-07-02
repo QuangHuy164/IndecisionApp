@@ -41,7 +41,6 @@
 
 // const root = createRoot(document.getElementById('app'))
 
-// //const number = [55, 100, 1000]
 
 // let visibility = false
 
