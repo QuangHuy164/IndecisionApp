@@ -14,15 +14,15 @@ const OnOffUseEffect = () => {
   return (
     <>
       <button onClick={toggle}>toggle</button>
-      <DisplayText visibility={visibility} />
-    </>
+      <DisplayText visibility={visibility}  /> 
+    </> // visibility is state
   )
 }
 
 export default OnOffUseEffect
 
 interface DisplayTextProps {
-  visibility: boolean
+  visibility: boolean // la property cua visibility
 }
 
 const DisplayText = (props: DisplayTextProps) => {

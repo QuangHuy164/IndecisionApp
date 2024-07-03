@@ -1,15 +1,12 @@
-import React, {useState} from 'react'
-//import useState
+import React, {useState} from 'react' //import useState
 
 const ChangeName = () => {
   //arrow function : write a function syntax
 
-  const [names, setNames] = useState<string[]>([])
-  // useState Hook, 'name':current state, 'setNames': function updates current state, inside useState is a string
+  const [names, setNames] = useState<string[]>([]) // useState Hook, 'name':current state, 'setNames': function updates current state, inside useState is a string
 
   const change = () => {
-    const copyNames = []
-    //create an array
+    const copyNames = [] //create an array
 
     for (let i = 0; i < names.length; i++) {
       //FOR LOOP:
@@ -17,19 +14,15 @@ const ChangeName = () => {
       // defines the condition for the loop to run
       // increases a value (i++) each time the code block in the loop has been executed
 
-      //declare var name
-      const name = names[i]
+      const name = names[i] //declare var name
 
       //copyNames.push(name)
-      
-      //access an array
-      copyNames[i] = name
+
+      copyNames[i] = name //access an array
     }
 
-    copyNames.push('')
-    // add new items to the end of an array
-    setNames(copyNames)
-    //call function
+    copyNames.push('') // add new items to the end of an array
+    setNames(copyNames) //call function
   }
   return (
     // return a value
@@ -37,8 +30,8 @@ const ChangeName = () => {
       <ol>
         {names.map((value, index) => {
           //map passing the array
-          return <li key={index}>{value}</li>
-          // keys help React identify which items have changed, added, removed.
+
+          return <li key={index}>{value}</li> // keys help React identify which items have changed, added, removed.
         })}
       </ol>
       <button className="square" onClick={change}>

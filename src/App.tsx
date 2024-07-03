@@ -6,6 +6,8 @@ import ColorList from './components/ColorList'
 import ColorListCopy from './components/ColorListCopy'
 import UseEffect from './components/UseEffect'
 import OnOffUseEffect from './components/OnOffUseEffect'
+import ToDo from './components/ToDo'
+
 
 const App = () => {
   return (
@@ -18,6 +20,7 @@ const App = () => {
       <ColorListCopy />
       <UseEffect />
       <OnOffUseEffect />
+      <ToDo />
     </div>
   )
 }
