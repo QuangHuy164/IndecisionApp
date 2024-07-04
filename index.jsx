@@ -69,11 +69,7 @@
 //         </button>
 //         <button onClick={removeLast}>Remove Last</button>
 //         <button onClick={removeAll}>Remove All</button>
-//         {
-//           //number.map((number) => {
-//           //return <p key={number}>Number: {number}</p>})
-//         }
-//         {/* map over app.options getting back an array of lis */}
+
 //         {app.options.map((option) => {
 //           return <li key={option}>{option}</li>
 //         })}
