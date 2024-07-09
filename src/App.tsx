@@ -8,6 +8,7 @@ import React from 'react'
 // import OnOffUseEffect from './components/OnOffUseEffect'
 //import ToDo from './components/ToDo'
 import ToDoCopy from './components/ToDoCopy'
+import EditToDo from './components/EditTodo'
 
 
 const App = () => {
@@ -22,7 +23,8 @@ const App = () => {
       <UseEffect />
       <OnOffUseEffect /> */}
       {/* <ToDo /> */}
-      <ToDoCopy />
+      {/* <ToDoCopy /> */}
+      <EditToDo />
     </div>
   )
 }

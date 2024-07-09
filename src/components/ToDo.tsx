@@ -24,7 +24,7 @@ const ToDo = () => {
   const [lists, setLists] = useState<string[]>([])
 
   const AddToDo = () => {
-    const newLists = [] //create an array 
+    const newLists = [] //create an array
 
     for (let i = 0; i < lists.length; i++) {
       const list = lists[i] // gan gia tri [i] vao state lists, declare new variable va assign voi list[i]
@@ -35,26 +35,25 @@ const ToDo = () => {
     newLists.push(todo)
 
     setLists(newLists)
-
   }
 
-  const deleteToDo = (index: number) => { // function to delete an item of array
-    console.log('delete', index)
-    const copyList = [ ]
+  const deleteToDo = (index: number) => {
+    // function to delete an item of array
+    //console.log('delete', index)
+    const copyList = []
 
     for (let i = 0; i < lists.length; i++) {
-        const list2 = lists[i]
+      const list2 = lists[i]
 
-        copyList[i] = list2
+      copyList[i] = list2
     }
 
+    const copyList1 = copyList.slice(0, index) // array.slice(start, end) return a copy of an array, start position is 0, initial array is empty -> end is index. First part of array
 
-    const copyList1 = copyList.slice(0,index) // array.slice(start, end) return a copy of an array, start position is 0, initial array is empty -> end is index. First part of array
+    const copyList2 = copyList.slice(index + 1, copyList.length) // second part of array. Start with the index + 1, end is the length of the array
 
-    const copyList2 = copyList.slice(index +1, copyList.length) // second part of array. Start with the index + 1, end is the length of the array
-    
-    const copyList3 = copyList1.concat(copyList2) // array.concat(array1,array2,...) combines 2 or more arrays and return  
-    
+    const copyList3 = copyList1.concat(copyList2) // array.concat(array1,array2,...) combines 2 or more arrays and return
+
     setLists(copyList3)
   }
 
@@ -71,6 +70,7 @@ const ToDo = () => {
       <ol>
         {lists.map((value, index) => {
           return (
+            // return property on this one
             <ToDoList
               key={index} // key must be unique
               index={index}
