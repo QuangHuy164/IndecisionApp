@@ -4,7 +4,7 @@ const FillText = () => {
   //firstName la state hien tai, setFirstName la de update cho initial state firstName
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
-//   const [midName, setMidName] = useState('')
+  //   const [midName, setMidName] = useState('')
   const [name, setName] = useState('')
 
   const fill = () => {
@@ -14,12 +14,11 @@ const FillText = () => {
     // setMidName(firstName)
     // setName(lastName)
 
-    // setName(`${}`) : Syntax to keep the in 1 state    
-    setName(`${lastName} ${firstName}`)
+    setName(`${lastName} ${firstName}`) // setName(`${}`) : Syntax to keep the in 1 state
   }
   return (
     <div>
-      <p>First Name</p> 
+      <p>First Name</p>
       <input
         placeholder="Enter text"
         // value : force the input's value to match the state variable
@@ -44,7 +43,7 @@ const FillText = () => {
       <p>
         {/* {midName} {name} */}
 
-        {name} 
+        {name}
       </p>
     </div>
   )

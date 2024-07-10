@@ -9,7 +9,8 @@ import React from 'react'
 //import ToDo from './components/ToDo'
 import ToDoCopy from './components/ToDoCopy'
 import EditToDo from './components/EditTodo'
-
+import EditToDoCopy from './components/EditToDoCopy'
+import EditToDoCopy2 from './components/EditToDoCopy2'
 
 const App = () => {
   return (
@@ -24,7 +25,9 @@ const App = () => {
       <OnOffUseEffect /> */}
       {/* <ToDo /> */}
       {/* <ToDoCopy /> */}
-      <EditToDo />
+      {/* <EditToDo /> */}
+      <EditToDoCopy />
+      <EditToDoCopy2 />
     </div>
   )
 }
