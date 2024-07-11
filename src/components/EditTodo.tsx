@@ -3,13 +3,13 @@ import React, {useEffect, useState} from 'react'
 interface EditToDoProps {
   value: string
   index: number
-  editLists: (index: number, value:string) => void
+  editLists: (index: number, value: string) => void
 }
 const EditToDoListsItem = (props: EditToDoProps) => {
   const [edit, setEdit] = useState('')
   const [newEdit, setNewEdit] = useState('')
   const onEdit = () => {
-    props.editLists(props.index,edit)
+    props.editLists(props.index, edit)
 
     setNewEdit(`${edit}`)
   }
@@ -37,7 +37,7 @@ const EditToDo = () => {
   const [lists, setLists] = useState<string[]>([])
 
   const editLists = (itemIndex: number, itemValue: string) => {
-     const copyList = [...lists]
+    const copyList = [...lists]
 
     // console.log(itemIndex, itemValue)
     copyList[itemIndex] = itemValue

@@ -10,7 +10,7 @@ import React from 'react'
 import ToDoCopy from './components/ToDoCopy'
 import EditToDo from './components/EditTodo'
 import EditToDoCopy from './components/EditToDoCopy'
-import EditToDoCopy2 from './components/EditToDoCopy2'
+
 
 const App = () => {
   return (
@@ -26,8 +26,8 @@ const App = () => {
       {/* <ToDo /> */}
       {/* <ToDoCopy /> */}
       {/* <EditToDo /> */}
-      <EditToDoCopy />
-      <EditToDoCopy2 />
+      <EditToDoCopy /> 
+
     </div>
   )
 }

@@ -3,18 +3,29 @@ import React, {useEffect, useState} from 'react'
 interface EditToDoCopyListItemProps {
   value: string
   index: number
+  //d:number
   editToDo: (index: number, value: string) => void
   deleteToDo: (index: number) => void
 }
 
 const EditToDoCopyListItem = (props: EditToDoCopyListItemProps) => {
+    const [time, setTime] = useState(new Date())
   const [edit, setEdit] = useState('')
   const [newEdit, setNewEdit] = useState('')
+
+useEffect(() => {
+    const IntervalId = setInterval(() => {
+        setTime(new Date());
+    }, 1000)
+    return () => clearInterval(IntervalId)
+}, [])
+
   const onEdit = () => {
     props.editToDo(props.index, edit)
-
+    
     setNewEdit(`${edit}`)
   }
+//const d = Date.now()
   const onDelete = () => {
     props.deleteToDo(props.index)
   }
@@ -31,7 +42,7 @@ const EditToDoCopyListItem = (props: EditToDoCopyListItemProps) => {
         }}></input>
       <button onClick={onEdit}>Edit</button>{' '}
       <button onClick={onDelete}>Delete</button>
-      <p>{props.value}</p>
+      <p>{props.value} {time.toLocaleTimeString()}</p>  
     </div>
   )
 }
