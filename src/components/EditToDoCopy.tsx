@@ -13,12 +13,12 @@ const EditToDoCopyListItem = (props: EditToDoCopyListItemProps) => {
   const [edit, setEdit] = useState('')
   const [newEdit, setNewEdit] = useState('')
 
-useEffect(() => {
-    const IntervalId = setInterval(() => {
-        setTime(new Date());
-    }, 1000)
-    return () => clearInterval(IntervalId)
-}, [])
+// useEffect(() => {
+//     const interval = setInterval(() => {
+//         setTime(new Date());
+//     }, 1000)
+//     return () => clearInterval(interval)
+// }, [])
 
   const onEdit = () => {
     props.editToDo(props.index, edit)
@@ -42,7 +42,7 @@ useEffect(() => {
         }}></input>
       <button onClick={onEdit}>Edit</button>{' '}
       <button onClick={onDelete}>Delete</button>
-      <p>{props.value} {time.toLocaleTimeString()}</p>  
+      <p>Created {props.value} at {time.toLocaleTimeString()}</p>  
     </div>
   )
 }

@@ -7,11 +7,10 @@ import React from 'react'
 // import UseEffect from './components/UseEffect'
 // import OnOffUseEffect from './components/OnOffUseEffect'
 //import ToDo from './components/ToDo'
-import ToDoCopy from './components/ToDoCopy'
-import EditToDo from './components/EditTodo'
-import EditToDoCopy from './components/EditToDoCopy'
-
-
+// import ToDoCopy from './components/ToDoCopy'
+// import EditToDo from './components/EditTodo'
+// import EditToDoCopy from './components/EditToDoCopy'
+import GoogleClone from './components/GoogleClone'
 const App = () => {
   return (
     <div>
@@ -26,7 +25,8 @@ const App = () => {
       {/* <ToDo /> */}
       {/* <ToDoCopy /> */}
       {/* <EditToDo /> */}
-      <EditToDoCopy /> 
+      {/* <EditToDoCopy />  */}
+      <GoogleClone />
 
     </div>
   )
