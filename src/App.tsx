@@ -13,7 +13,7 @@ import React from 'react'
 import GoogleClone from './components/GoogleClone'
 const App = () => {
   return (
-    <div>
+    <div style={{display: 'flex', width: '100%', height: '100%'}}>
       {/* <Button /> */}
       {/* <ChangeName />
       <FillText />
@@ -27,7 +27,6 @@ const App = () => {
       {/* <EditToDo /> */}
       {/* <EditToDoCopy />  */}
       <GoogleClone />
-
     </div>
   )
 }
