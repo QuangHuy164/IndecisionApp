@@ -22,7 +22,7 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: hidden; 
   border: 1px solid white;
 }
 
@@ -40,7 +40,7 @@ li a {
   margin-right: 25px;
 }
 
-li a:hover:not(.active) {
+li a:hover:not(.active) { 
   text-underline-position: below;
 }
 li a.active {
@@ -65,18 +65,19 @@ li a.active {
   color: blue;
   align-items: center;
   font-size: 60px;
+  padding-bottom: 30px;
 }
 
 input {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
+
   width: 40%;
   border-radius: 10cm;
   border-color: whitesmoke;
+  border-top-color: whitesmoke;
+  border-bottom-color: whitesmoke;
+  border-left-color:whitesmoke;
   padding: 15px;
-  box-sizing: border-box;
+ 
 }
 
 button {
@@ -90,9 +91,9 @@ button {
 }
 
 p {
-  text-align: center;
-  padding: 15px;
-  vertical-align: inherit;
+  text-align: right;
+  padding: 15px 30px;
+  
 }
 
 .list {
@@ -103,6 +104,9 @@ p {
   order: 1;
 }
 
+.bottom {
+  justify-content: space-between;
+}
 /* 
 .button2 {
     align-items: flex-end;

@@ -11,6 +11,7 @@ import React from 'react'
 // import EditToDo from './components/EditTodo'
 // import EditToDoCopy from './components/EditToDoCopy'
 import GoogleClone from './components/GoogleClone'
+
 const App = () => {
   return (
     <div style={{display: 'flex', width: '100%', height: '100%'}}>
@@ -27,6 +28,7 @@ const App = () => {
       {/* <EditToDo /> */}
       {/* <EditToDoCopy />  */}
       <GoogleClone />
+
     </div>
   )
 }

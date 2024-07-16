@@ -41,7 +41,6 @@
 
 // const root = createRoot(document.getElementById('app'))
 
-
 // let visibility = false
 
 // const toggleVision = () => {
@@ -102,7 +101,16 @@
 import React from 'react'
 import {createRoot} from 'react-dom/client'
 import App, {a} from './src/App'
+import store from './src/components/store'
+import {Provider} from 'react-redux'
+import counter from './src/components/counter'
 
 // Render your React component instead
 const root = createRoot(document.getElementById('app'))
-root.render(<App />)
+root.render(
+  <Provider store={store}
+  counter={counter}
+  >
+    <App />
+  </Provider>
+)

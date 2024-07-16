@@ -50,15 +50,18 @@ const GoogleClone = () => {
           </div>
         </div>
 
-        <div style={{backgroundColor: '#dadce0',flexDirection:'row',display:'flex'}}>
+        <div className='bottom' style={{backgroundColor: '#dadce0',display:'flex'}}>
           <p>Information</p>
           <p>Advertisements</p>
           <p>Companies</p>
           <p>This is how Haku works</p>
+          
+          <div className='bottom2' style={{display:'flex',backgroundColor: '#dadce0' }}>
+          <p>Data protection</p>
+          <p>Term of use</p>
           <p>Settings</p>
-          <p>Settings</p>
-          <p>Settings</p>
-        </div>
+          </div>
+          </div>
       </div>
     </>
   )
