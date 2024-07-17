@@ -11,8 +11,8 @@ import React from 'react'
 // import EditToDo from './components/EditTodo'
 // import EditToDoCopy from './components/EditToDoCopy'
 import GoogleClone from './components/GoogleClone'
-import Counter from './components/Counter'
-import Input from './components/Input'
+import Counter from './counter/Counter'
+import Input from './Input/inputReducer'
 
 const App = () => {
   return (
