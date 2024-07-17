@@ -11,6 +11,8 @@ import React from 'react'
 // import EditToDo from './components/EditTodo'
 // import EditToDoCopy from './components/EditToDoCopy'
 import GoogleClone from './components/GoogleClone'
+import Counter from './components/Counter'
+import Input from './components/Input'
 
 const App = () => {
   return (
@@ -27,8 +29,9 @@ const App = () => {
       {/* <ToDoCopy /> */}
       {/* <EditToDo /> */}
       {/* <EditToDoCopy />  */}
-      <GoogleClone />
-
+        {/* <GoogleClone /> */}
+          {/* <Counter /> */}
+          <Input />
     </div>
   )
 }

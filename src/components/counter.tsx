@@ -1,27 +1,40 @@
 import React from 'react'
 
-import { UseSelector, useDispatch, useSelector } from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 
-import { decrement, increment } from './counterSlice'
+import {incrementCounterValue, decrementCounterValue} from './counterActions'
+import {getCounterValue} from '../selector/counterSelector'
 
-export function counter() {
-    const count = useSelector(state => state.counter.value)
-    const dispatch = useDispatch()
+// import {decrement, increment, incrementByAmount} from './counterSlice'
 
-    return (
-        <div>
-            <div>
-                <button
-                aria-label='Increment value'
-                onClick={() => {dispatch(increment())}}> Increment </button>
-               
-                  
-                    <span>{count}</span>
-                    <button aria-label='Decrement value'
-                    onClick={() => {dispatch(decrement())}}> Decrement
-                </button>
+const Counter = () => {
+  const counterValue = useSelector(getCounterValue)
+  const dispatch = useDispatch()
 
-            </div>
-        </div>
-    )
+  return (
+    <div>
+      <div>
+        <button
+          aria-label="Increment value"
+          onClick={() => {
+            // dispatch(incrementByAmount(10))
+
+            dispatch(incrementCounterValue())
+          }}>
+          Increment
+        </button>
+
+        <span>{counterValue}</span>
+        <button
+          aria-label="Decrement value"
+          onClick={() => {
+            dispatch(decrementCounterValue())
+          }}>
+          Decrement
+        </button>
+      </div>
+    </div>
+  )
 }
+
+export default Counter
