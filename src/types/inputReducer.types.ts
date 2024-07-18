@@ -1,3 +1,4 @@
+
 export interface InputReducer {
-    value:number
+    inputValue: string
 }

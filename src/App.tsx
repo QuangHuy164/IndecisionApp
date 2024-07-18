@@ -12,7 +12,9 @@ import React from 'react'
 // import EditToDoCopy from './components/EditToDoCopy'
 import GoogleClone from './components/GoogleClone'
 import Counter from './counter/Counter'
-import Input from './Input/inputReducer'
+import Input from './Input/Input'
+import ToDoList from './components/ToDoList'
+
 
 const App = () => {
   return (
@@ -31,7 +33,8 @@ const App = () => {
       {/* <EditToDoCopy />  */}
         {/* <GoogleClone /> */}
           {/* <Counter /> */}
-          <Input />
+    {/* <Input /> */}
+    <ToDoList />
     </div>
   )
 }

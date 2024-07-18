@@ -83,11 +83,4 @@ const ToDoCopy = () => {
 export default ToDoCopy
 
 
-let array = ['a','b','c','d','e']
-
-let array2 = array.filter((value, index) => {
-  return index !== 2
-})
-
-console.log('array', array, 'array2', array2)
 
