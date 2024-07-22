@@ -1,4 +1,10 @@
 export interface ToDoReducer {
     inputValue:string
-    array: []
+    todoArray: ToDoItem[]
+}
+
+export interface ToDoItem {
+    id: string
+    createdAt: number
+    title:string
 }

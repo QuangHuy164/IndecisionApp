@@ -1,17 +1,28 @@
-export const UPDATE_INPUT_VALUE = 'UPDATE_INPUT_VALUE'
+import { ToDoItem } from "@/types/todoReducer.types"
 
-export const updateInputValue = (a:string) => {
+export const UPDATE_TODO_ITEM = 'UPDATE_TODO_ITEM'
+
+export const updateTodoItem = (a:ToDoItem) => {
     return {
-        type: UPDATE_INPUT_VALUE,
+        type: UPDATE_TODO_ITEM,
         payload: a
     }
 }
 
-export const SUBMIT_INPUT_VALUE = 'SUBMIT_INPUT_VALUE'
+export const CREATE_TODO_ITEM = 'CREATE_TODO_ITEM'
 
-export const submitInputValue = (b:[]) => {
+export const createTodoItem = (b:ToDoItem) => {
     return {
-    type: SUBMIT_INPUT_VALUE,
+    type: CREATE_TODO_ITEM,
     payload: b
     }
 }
+
+export const DELETE_TODO_ITEM = 'DELETE_TODO_ITEM'
+
+export const deleteTodoItem = (c:ToDoItem) => {
+    return {
+        type: DELETE_TODO_ITEM,
+        payload: c
+    }
+} 

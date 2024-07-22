@@ -1,21 +1,28 @@
 import {ToDoReducer} from '@/types/todoReducer.types'
 import {Action} from 'redux'
-import {SUBMIT_INPUT_VALUE, UPDATE_INPUT_VALUE} from './TodoAction'
+import { CREATE_TODO_ITEM, DELETE_TODO_ITEM, UPDATE_TODO_ITEM } from './TodoAction'
 
 const initialState: ToDoReducer = {
   inputValue: '',
-  array: [],
+  todoArray: [],
 }
 
 const todoReducer = (state = initialState, action: Action) => {
   switch (action.type) {
-    case UPDATE_INPUT_VALUE:
+    case UPDATE_TODO_ITEM:
       state = {...state}
       state.inputValue = (action as unknown as any).payload
+      console.log('UPDATE_TODO_ITEM payload', (action as unknown as any).payload)
       return state
-    case SUBMIT_INPUT_VALUE:
+
+    case CREATE_TODO_ITEM:
       state = {...state}
-      state.array.push() 
+      
+      console.log()
+      return state
+    
+    case DELETE_TODO_ITEM:
+        return state
 
     default:
       return {...state}

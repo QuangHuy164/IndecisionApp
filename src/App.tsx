@@ -13,7 +13,8 @@ import React from 'react'
 import GoogleClone from './components/GoogleClone'
 import Counter from './counter/Counter'
 import Input from './Input/Input'
-import ToDoList from './components/ToDoList'
+ import ToDoList from './components/ToDoList'
+import Note from './components/Note'
 
 
 const App = () => {
@@ -34,7 +35,8 @@ const App = () => {
         {/* <GoogleClone /> */}
           {/* <Counter /> */}
     {/* <Input /> */}
-    <ToDoList />
+    {/* <ToDoList /> */}
+    <Note />
     </div>
   )
 }
