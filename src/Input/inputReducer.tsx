@@ -15,7 +15,7 @@ const inputReducer = (state = initialState, action: Action) => {
       )
 
       state = {...state}
-      state.inputValue = (action as unknown as any).payload
+      state.inputValue = (action as unknown as any).payload //'inputValue' property being updated with value of 'payload' from dispatch action
 
       return state
 

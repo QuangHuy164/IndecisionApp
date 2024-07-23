@@ -80,7 +80,7 @@ const ToDoList = () => {
     // copyList[itemIndex] = copyToDo
     setLists(copyList)
   }
-
+  
   const deleteToDo = (index: number) => {
     const deleteList = lists.filter((itemValue, itemIndex) => {
       return itemIndex !== index

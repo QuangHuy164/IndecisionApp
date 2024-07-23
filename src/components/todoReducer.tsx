@@ -1,27 +1,32 @@
 import {ToDoReducer} from '@/types/todoReducer.types'
 import {Action} from 'redux'
-import { CREATE_TODO_ITEM, DELETE_TODO_ITEM, UPDATE_TODO_ITEM } from './TodoAction'
+import { ADD_NOTE, DELETE_NOTE, UPDATE_NOTE } from './TodoAction'
 
 const initialState: ToDoReducer = {
   inputValue: '',
   todoArray: [],
+  filter: function (arg0: (note: any) => boolean): unknown {
+    throw new Error('Function not implemented.')
+  }
 }
 
 const todoReducer = (state = initialState, action: Action) => {
   switch (action.type) {
-    case UPDATE_TODO_ITEM:
+    case UPDATE_NOTE:
+      
       state = {...state}
       state.inputValue = (action as unknown as any).payload
-      console.log('UPDATE_TODO_ITEM payload', (action as unknown as any).payload)
+       console.log('UPDATE_TODO_ITEM payload', (action as unknown as any).payload)
       return state
 
-    case CREATE_TODO_ITEM:
+    case ADD_NOTE:
       state = {...state}
       
       console.log()
       return state
     
-    case DELETE_TODO_ITEM:
+    case DELETE_NOTE:
+      // return state.filter(note => note.id !== action.id);
         return state
 
     default:

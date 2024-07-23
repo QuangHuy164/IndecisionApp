@@ -1,28 +1,29 @@
-import { ToDoItem } from "@/types/todoReducer.types"
+import { ToDoItem, ToDoReducer } from "@/types/todoReducer.types"
 
-export const UPDATE_TODO_ITEM = 'UPDATE_TODO_ITEM'
+export const UPDATE_NOTE = 'UPDATE_NOTE'
 
-export const updateTodoItem = (a:ToDoItem) => {
+export const updateTodoItem = (note:ToDoReducer) => {
     return {
-        type: UPDATE_TODO_ITEM,
-        payload: a
+        type: UPDATE_NOTE,
+        payload: note
     }
 }
 
-export const CREATE_TODO_ITEM = 'CREATE_TODO_ITEM'
+export const ADD_NOTE = 'ADD_NOTE'
 
-export const createTodoItem = (b:ToDoItem) => {
+export const addToDoItem = (note:ToDoReducer) => {
     return {
-    type: CREATE_TODO_ITEM,
-    payload: b
+    type: ADD_NOTE,
+    payload:note
     }
 }
 
-export const DELETE_TODO_ITEM = 'DELETE_TODO_ITEM'
+export const DELETE_NOTE = 'DELETE_NOTE'
 
-export const deleteTodoItem = (c:ToDoItem) => {
+export const deleteTodoItem = (id:ToDoItem) => {
     return {
-        type: DELETE_TODO_ITEM,
-        payload: c
+        type: DELETE_NOTE,
+        payload: id
     }
 } 
+
