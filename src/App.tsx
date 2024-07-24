@@ -37,7 +37,7 @@ const App = () => {
           {/* <Counter /> */}
     {/* <Input /> */}
     {/* <ToDoList /> */}
-    <NoteApp value={''} index={0} />
+    {/* <NoteApp value={''} index={0} /> */}
     </div>
   )
 }

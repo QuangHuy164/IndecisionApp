@@ -16,6 +16,7 @@ const NoteApp = (props:ToDoItemProps) => {
       setList(deleteValue)
       console.log(deleteValue)
     }
+    
   const [form, setForm] = useState('')
   const [list, setList] = useState<string[]>([])
   const onSubmit = () => {

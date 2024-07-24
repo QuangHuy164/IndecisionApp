@@ -100,14 +100,31 @@
 
 import React from 'react'
 import {createRoot} from 'react-dom/client'
-import App, {a} from './src/App'
+import App from './src/App'
 import store from './src/components/store'
 import {Provider} from 'react-redux'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import Root from './src/routes/root'
+import './src/routes/styles.css'
+import ErrorPage from './src/routes/error-page'
+import Contact from './src/routes/contact'
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: 'contacts/:contactId',
+    element: <Contact />
+  }
+])
 // Render your React component instead
 const root = createRoot(document.getElementById('app'))
 root.render(
   <Provider store={store}>
-    <App  />
+    <RouterProvider router={router} />
+    <App />
   </Provider>
 )
