@@ -104,20 +104,34 @@ import App from './src/App'
 import store from './src/components/store'
 import {Provider} from 'react-redux'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Root from './src/routes/root'
+import Root, {
+  loader as rootLoader,
+  action as rootAction
+} from './src/routes/root'
 import './src/routes/styles.css'
 import ErrorPage from './src/routes/error-page'
-import Contact from './src/routes/contact'
+import Contact, {loader as contactLoader} from './src/routes/contact'
+import EditContact from './src/routes/edit'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: 'contacts/:contactId',
-    element: <Contact />
+    errorElement: <ErrorPage />,
+    loader: rootLoader,
+    action: rootAction,
+    children: [
+      {
+        path: 'contacts/:contactId',
+        element: <Contact />,
+        loader: contactLoader
+      },
+      {
+        path: 'contacts/:contactId/edit',
+        element: <EditContact />,
+        loader: contactLoader
+      }
+    ]
   }
 ])
 // Render your React component instead

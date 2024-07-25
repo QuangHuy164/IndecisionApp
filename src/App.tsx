@@ -20,7 +20,7 @@ import NoteApp from './components/NoteApp'
 
 const App = () => {
   return (
-    <div style={{display: 'flex', width: '100%', height: '100%'}}>
+    <div>
       {/* <Button /> */}
       {/* <ChangeName />
       <FillText />
@@ -38,6 +38,7 @@ const App = () => {
     {/* <Input /> */}
     {/* <ToDoList /> */}
     {/* <NoteApp value={''} index={0} /> */}
+    {/* style={{display: 'flex', width: '100%', height: '100%'}} */}
     </div>
   )
 }
