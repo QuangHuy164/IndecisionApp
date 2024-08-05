@@ -16,11 +16,35 @@ import Input from './Input/Input'
 import ToDoList from './components/ToDoList'
 
 import NoteApp from './components/NoteApp'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import Name from './routes/Name'
+import Edit from './routes/Edit'
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Name />
+    //loader: rootLoader,
+    // action: Edit,
+    // children: [
+    //   {
+    //     path: '/edit',
+    //     element: <Edit />
+    //     // loader: nameLoader
+    //   }
+    // ]
+  },
+  {
+    path: '/edit',
+    element: <Edit />
+  }
+])
 
 const App = () => {
   return (
     <div>
+      <RouterProvider router={router} />
+
       {/* <Button /> */}
       {/* <ChangeName />
       <FillText />
@@ -33,12 +57,12 @@ const App = () => {
       {/* <ToDoCopy /> */}
       {/* <EditToDo /> */}
       {/* <EditToDoCopy />  */}
-        {/* <GoogleClone /> */}
-          {/* <Counter /> */}
-    {/* <Input /> */}
-    {/* <ToDoList /> */}
-    {/* <NoteApp value={''} index={0} /> */}
-    {/* style={{display: 'flex', width: '100%', height: '100%'}} */}
+      {/* <GoogleClone /> */}
+      {/* <Counter /> */}
+      {/* <Input /> */}
+      {/* <ToDoList /> */}
+      {/* <NoteApp value={''} index={0} /> */}
+      {/* style={{display: 'flex', width: '100%', height: '100%'}} */}
     </div>
   )
 }
