@@ -1,19 +1,20 @@
 import React from 'react'
 // import ButtonCopy from './components/ButtonCopy'
 // import ChangeName from './components/ChangeName'
-// import FillText from './components/FillText'
+//import FillText from './components/FillText'
 // import ColorList from './components/ColorList'
 // import ColorListCopy from './components/ColorListCopy'
 // import UseEffect from './components/UseEffect'
 // import OnOffUseEffect from './components/OnOffUseEffect'
 //import ToDo from './components/ToDo'
 // import ToDoCopy from './components/ToDoCopy'
-// import EditToDo from './components/EditTodo'
+import EditToDo from './components/EditTodo'
 // import EditToDoCopy from './components/EditToDoCopy'
 import GoogleClone from './components/GoogleClone'
 import Counter from './counter/Counter'
 import Input from './Input/Input'
 import ToDoList from './components/ToDoList'
+
 
 import NoteApp from './components/NoteApp'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
@@ -46,9 +47,9 @@ const App = () => {
       <RouterProvider router={router} />
 
       {/* <Button /> */}
-      {/* <ChangeName />
-      <FillText />
-      <ButtonCopy />
+      {/* <ChangeName /> */}
+      {/* <FillText /> */}
+      {/* <ButtonCopy />
       <ColorList />
       <ColorListCopy />
       <UseEffect />

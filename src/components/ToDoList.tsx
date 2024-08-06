@@ -102,7 +102,7 @@ const ToDoList = () => {
         {lists.map((item, index) => {
           return (
             <ToDoListItem
-              key={`iem-${item.id}`}
+              key={`item-${item.id}`}
               item={item}
               index={index}
               editToDo={editToDo}

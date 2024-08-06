@@ -4,9 +4,10 @@ import {useLocation, useNavigate} from 'react-router-dom'
 const Name = () => {
   const navigate = useNavigate()
   const location = useLocation()
-
+    
   const edit = () => {
     navigate('/edit')
+    
   }
   return (
     <div>
