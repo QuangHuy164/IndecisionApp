@@ -27,7 +27,7 @@ const ToDo = () => {
     const newLists = [] //create an array
 
     for (let i = 0; i < lists.length; i++) {
-      const list = lists[i] // gan gia tri [i] vao state lists, declare new variable va assign voi list[i]
+      const list = lists[i] // gan gia tri [i] vao state lists, declare new variable and assign to list[i]
 
       newLists[i] = list // assign variable just created with a copy of array newLists
     }

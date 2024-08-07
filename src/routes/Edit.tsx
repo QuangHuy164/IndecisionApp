@@ -1,14 +1,29 @@
+import {NameDescription} from '@/types/nameDescription.types'
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 
+
 const Edit = () => {
+  const [nameDescriptionArray, setNameDescriptionArray] = useState<
+    NameDescription[]
+  >([])
+
   const navigate = useNavigate()
-  const [input, setInput] = useState('')
-  const [value, setValue] = useState('')
-  const [item, setItem] = useState('')
+  const [nameInput, setnameInput] = useState('')
+  const [descriptionInput, setDescriptionInput] = useState('')
+  //   const [item, setItem] = useState([])
 
   const onSave = () => {
-    setItem(`${input} ${value}`)
+    const newNameDescriptionArray = [...nameDescriptionArray]
+    const nameDescription: NameDescription = {
+      name: nameInput,
+      description: descriptionInput
+    }
+    newNameDescriptionArray.push(nameDescription)
+    setNameDescriptionArray(newNameDescriptionArray)
+    console.log(newNameDescriptionArray)
+
+    // setItem(`${nameInput} ${descriptionInput}`)
   }
   const onCancel = () => {
     navigate('/')
@@ -17,16 +32,16 @@ const Edit = () => {
     <div style={{display: 'flex', flexDirection: 'column', width: 200}}>
       <label>Name</label>
       <input
-        value={input}
+        value={nameInput}
         onChange={(e) => {
-          setInput(e.target.value)
+          setnameInput(e.target.value)
         }}></input>
       <div style={{height: 20}} />
       <label>Description</label>
       <input
-        value={value}
+        value={descriptionInput}
         onChange={(e) => {
-          setValue(e.target.value)
+          setDescriptionInput(e.target.value)
         }}></input>
       <div style={{height: 20}} />
       <div style={{display: 'flex', justifyContent: 'space-between'}}>
@@ -34,7 +49,7 @@ const Edit = () => {
 
         <button onClick={onCancel}>Cancel</button>
       </div>
-      <p>{item}</p>
+      <p></p>
     </div>
   )
 }
