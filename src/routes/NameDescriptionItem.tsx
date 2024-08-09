@@ -15,7 +15,7 @@ const NameDescriptionItem = (props: NameDescriptionProps) => {
   }
   return (
     <div style={{backgroundColor: 'lightblue'}}>
-      <p>{props.name}</p>
+      <input value={props.name} />
       <p>{props.description}</p>
       <div style={{display: 'flex', justifyContent: 'space-between'}}>
         <button>Edit</button>

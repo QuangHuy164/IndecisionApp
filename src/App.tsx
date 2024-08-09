@@ -11,7 +11,7 @@ import React from 'react'
 import EditToDo from './components/EditTodo'
 // import EditToDoCopy from './components/EditToDoCopy'
 import GoogleClone from './components/GoogleClone'
-import Counter from './counter/Counter'
+
 import Input from './Input/Input'
 import ToDoList from './components/ToDoList'
 
@@ -58,7 +58,7 @@ const App = () => {
       {/* <EditToDo /> */}
       {/* <EditToDoCopy />  */}
       {/* <GoogleClone /> */}
-      {/* <Counter /> */}
+
       {/* <Input /> */}
       {/* <ToDoList /> */}
       {/* <NoteApp value={''} index={0} /> */}

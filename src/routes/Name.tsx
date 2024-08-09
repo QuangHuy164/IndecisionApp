@@ -3,8 +3,6 @@ import {useNavigate} from 'react-router-dom'
 
 import {useDispatch, useSelector} from 'react-redux'
 import {getNameDescriptionArray} from '../selector/nameDescriptionSelector'
-import {editNameDescription} from '@/action/nameDescriptionAction'
-import {NameDescription} from '@/types/nameDescription.types'
 import NameDescriptionItem from './NameDescriptionItem'
 import {v4} from 'uuid'
 
