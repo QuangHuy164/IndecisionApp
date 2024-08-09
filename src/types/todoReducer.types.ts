@@ -1,5 +1,4 @@
 export interface ToDoReducer {
-    filter(arg0: (note: any) => boolean): unknown
     inputValue:string
     todoArray: ToDoItem[]
 }

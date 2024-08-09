@@ -1,9 +1,8 @@
 export interface NameDescriptionReducer {
-    nameDescriptionArray: NameDescription[]
+  nameDescriptionArray: NameDescription[]
 }
 
-
 export interface NameDescription {
-    name:string
-    description:string
+  name: string
+  description: string
 }

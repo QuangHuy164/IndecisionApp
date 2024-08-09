@@ -5,7 +5,7 @@ import { updateInputValue } from './inputAction'
 
 
 const Input = () => {
-
+    
     const inputValue = useSelector(getInputValue)
     const dispatch = useDispatch()
     

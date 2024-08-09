@@ -1,29 +1,30 @@
-import {NameDescription} from '@/types/nameDescription.types'
+import { getNameDescriptionArray } from '../selector/nameDescriptionSelector'
+import {deleteNameDescription, EDIT_NAME, editNameDescription} from '../action/nameDescriptionAction'
+import {NameDescription} from '../types/nameDescription.types'
 import React, {useState} from 'react'
+import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 
-
 const Edit = () => {
-  const [nameDescriptionArray, setNameDescriptionArray] = useState<
-    NameDescription[]
-  >([])
-
+  const dispatch = useDispatch()
+  const nameDescriptionArray = useSelector(getNameDescriptionArray)
+    
   const navigate = useNavigate()
   const [nameInput, setnameInput] = useState('')
   const [descriptionInput, setDescriptionInput] = useState('')
-  //   const [item, setItem] = useState([])
+
 
   const onSave = () => {
+     navigate('/')
+    
     const newNameDescriptionArray = [...nameDescriptionArray]
     const nameDescription: NameDescription = {
       name: nameInput,
       description: descriptionInput
     }
     newNameDescriptionArray.push(nameDescription)
-    setNameDescriptionArray(newNameDescriptionArray)
-    console.log(newNameDescriptionArray)
-
-    // setItem(`${nameInput} ${descriptionInput}`)
+    dispatch(editNameDescription(newNameDescriptionArray))
+    
   }
   const onCancel = () => {
     navigate('/')
@@ -34,7 +35,7 @@ const Edit = () => {
       <input
         value={nameInput}
         onChange={(e) => {
-          setnameInput(e.target.value)
+          setnameInput(e.target.value)  
         }}></input>
       <div style={{height: 20}} />
       <label>Description</label>
@@ -46,10 +47,8 @@ const Edit = () => {
       <div style={{height: 20}} />
       <div style={{display: 'flex', justifyContent: 'space-between'}}>
         <button onClick={onSave}>Save</button>
-
         <button onClick={onCancel}>Cancel</button>
       </div>
-      <p></p>
     </div>
   )
 }
