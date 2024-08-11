@@ -1,5 +1,5 @@
 import { getNameDescriptionArray } from '../selector/nameDescriptionSelector'
-import {deleteNameDescription, EDIT_NAME, editNameDescription} from '../action/nameDescriptionAction'
+import { editNameDescription} from '../action/nameDescriptionAction'
 import {NameDescription} from '../types/nameDescription.types'
 import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
@@ -24,7 +24,6 @@ const Edit = () => {
     }
     newNameDescriptionArray.push(nameDescription)
     dispatch(editNameDescription(newNameDescriptionArray))
-    
   }
   const onCancel = () => {
     navigate('/')

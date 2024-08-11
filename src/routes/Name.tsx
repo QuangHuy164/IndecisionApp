@@ -9,19 +9,22 @@ import {v4} from 'uuid'
 const Name = () => {
   const nameDescriptionArray = useSelector(getNameDescriptionArray)
   console.log('name.tsx Array', nameDescriptionArray)
+
   const dispatch = useDispatch()
 
   const navigate = useNavigate()
 
-  const edit = () => {
+  const onAdd = () => {
     navigate('/edit')
   }
+
   return (
     <div>
       <h1>Name</h1>
-      <button onClick={edit}>Add</button>
-      <ol style={{width:200, height:100}}>
-        {nameDescriptionArray.map((nameDescription,index) => {
+      <button onClick={onAdd}>Add</button>
+      {/* <button onClick={onNew}>NEW</button> */}
+      <ol style={{width: 200, height: 100}}>
+        {nameDescriptionArray.map((nameDescription, index) => {
           const key = `name-description-list-item-${v4()}`
 
           console.log(key)

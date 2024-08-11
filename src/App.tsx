@@ -20,6 +20,7 @@ import NoteApp from './components/NoteApp'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Name from './routes/Name'
 import Edit from './routes/Edit'
+import Add from './routes/Add'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: '/edit',
     element: <Edit />
+  },
+  {
+    path:'/add',
+    element: <Add />
   }
 ])
 
