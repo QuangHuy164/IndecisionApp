@@ -1,9 +1,14 @@
-import { NameDescription } from '../types/nameDescription.types'
-import {deleteNameDescription, editNameDescription} from '../action/nameDescriptionAction'
-import React, { useState } from 'react'
+import {NameDescription} from '../types/nameDescription.types'
+import {
+  deleteNameDescription,
+  saveNameDescription,
+  updateEditIndex
+} from '../action/nameDescriptionAction'
+import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { getNameDescriptionArray } from '../selector/nameDescriptionSelector'
+import {useNavigate} from 'react-router-dom'
+import {getEditIndex, getNameDescriptionArray} from '../selector/nameDescriptionSelector'
+import Add from './Add'
 
 interface NameDescriptionProps {
   name: string
@@ -12,28 +17,19 @@ interface NameDescriptionProps {
 }
 const NameDescriptionItem = (props: NameDescriptionProps) => {
   const dispatch = useDispatch()
-  const nameDescriptionArray = useSelector(getNameDescriptionArray)
-    
   const navigate = useNavigate()
-  const [nameInput, setnameInput] = useState('')
-  const [descriptionInput, setDescriptionInput] = useState('')
-    
+
   const onEdit = () => {
-     
-     const newNameDescriptionArray = [...nameDescriptionArray]
-     const nameDescription: NameDescription = {
-       name: nameInput,
-       description: descriptionInput
-     }
-     newNameDescriptionArray.push(nameDescription)
-     dispatch(editNameDescription(newNameDescriptionArray))
-   }
+    navigate('/edit')
+    dispatch(updateEditIndex(props.index))
+  }
+
   const onDelete = () => {
     dispatch(deleteNameDescription(props.index))
   }
   return (
     <div style={{backgroundColor: 'lightblue'}}>
-      <p>{props.name} </p>
+      <p>{props.name}</p>
       <p>{props.description}</p>
       <div style={{display: 'flex', justifyContent: 'space-between'}}>
         <button onClick={onEdit}>Edit</button>

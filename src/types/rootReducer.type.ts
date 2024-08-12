@@ -4,7 +4,6 @@ import {ToDoReducer} from './todoReducer.types'
 
 export interface RootReducer {
   inputReducer: InputReducer
-
   todoReducer: ToDoReducer
   nameDescriptionReducer: NameDescriptionReducer
 }

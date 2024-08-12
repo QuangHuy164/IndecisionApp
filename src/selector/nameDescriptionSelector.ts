@@ -6,7 +6,14 @@ const getNameDescriptionReducer = (state: RootReducer) =>
 
 export const getNameDescriptionArray = createSelector(
   getNameDescriptionReducer,
-  (r) => {
-    return r.nameDescriptionArray
+  (nameDescriptionReducer) => {
+    return nameDescriptionReducer.nameDescriptionArray
+  }
+)
+
+export const getEditIndex = createSelector(
+  getNameDescriptionReducer,
+  (nameDescriptionReducer) => {
+    return nameDescriptionReducer.editIndex
   }
 )

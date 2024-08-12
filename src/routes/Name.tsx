@@ -15,7 +15,7 @@ const Name = () => {
   const navigate = useNavigate()
 
   const onAdd = () => {
-    navigate('/edit')
+    navigate('/add')
   }
 
   return (
@@ -26,8 +26,6 @@ const Name = () => {
       <ol style={{width: 200, height: 100}}>
         {nameDescriptionArray.map((nameDescription, index) => {
           const key = `name-description-list-item-${v4()}`
-
-          console.log(key)
 
           return (
             <NameDescriptionItem
