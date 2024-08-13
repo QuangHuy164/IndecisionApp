@@ -1,3 +1,6 @@
+{/* file Action for updating the state of Redux
+   */}
+
 import {
   NameDescription} from '../types/nameDescription.types'
 

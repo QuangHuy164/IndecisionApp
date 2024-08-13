@@ -1,14 +1,10 @@
-import {NameDescription} from '../types/nameDescription.types'
 import {
   deleteNameDescription,
-  saveNameDescription,
   updateEditIndex
 } from '../action/nameDescriptionAction'
 import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
-import {getEditIndex, getNameDescriptionArray} from '../selector/nameDescriptionSelector'
-import Add from './Add'
 
 interface NameDescriptionProps {
   name: string

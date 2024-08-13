@@ -1,6 +1,5 @@
 import {DELETE_NAME, UPDATE_EDIT_INDEX, SAVE_NAME} from '../action/nameDescriptionAction'
 import {NameDescriptionReducer} from '../types/nameDescription.types'
-import {Action} from 'redux'
 
 const initialState: NameDescriptionReducer = {
   nameDescriptionArray: [],

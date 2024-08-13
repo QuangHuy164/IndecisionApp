@@ -1,21 +1,24 @@
-import {saveNameDescription} from '@/action/nameDescriptionAction'
-import {getEditIndex, getNameDescriptionArray} from '@/selector/nameDescriptionSelector'
-import {NameDescription1} from '@/types/nameDescription1.type'
+import { getEditIndex, getNameDescriptionArray} from '../selector/nameDescriptionSelector'
+import { saveNameDescription} from '../action/nameDescriptionAction'
+import {NameDescription} from '../types/nameDescription.types'
 import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 
-const Edit1 = () => {
+const Add2 = () => {
   const dispatch = useDispatch()
   const nameDescriptionArray = useSelector(getNameDescriptionArray)
-  const editIndex = useSelector(getEditIndex)
+    
   const navigate = useNavigate()
   const [nameInput, setnameInput] = useState('')
   const [descriptionInput, setDescriptionInput] = useState('')
-  const onEdit = () => {
-    navigate('/')
+
+
+  const onSave = () => {
+     navigate('/')
+    
     const newNameDescriptionArray = [...nameDescriptionArray]
-    const nameDescription: NameDescription1 = {
+    const nameDescription: NameDescription = {
       name: nameInput,
       description: descriptionInput
     }
@@ -26,23 +29,27 @@ const Edit1 = () => {
     navigate('/')
   }
   return (
-    <div>
-      <p>Name</p>
+    <div style={{display: 'flex', flexDirection: 'column', width: 200}}>
+      <label>Name</label>
       <input
         value={nameInput}
         onChange={(e) => {
-          setnameInput(e.target.value)
+          setnameInput(e.target.value)  
         }}></input>
-      <button onClick={onEdit}>Edit</button>
-      <p>Description</p>
+      <div style={{height: 20}} />
+      <label>Description</label>
       <input
         value={descriptionInput}
         onChange={(e) => {
           setDescriptionInput(e.target.value)
         }}></input>
-      <button onClick={onCancel}>Cancel</button>
+      <div style={{height: 20}} />
+      <div style={{display: 'flex', justifyContent: 'space-between'}}>
+        <button onClick={onSave}>Save</button>
+        <button onClick={onCancel}>Cancel</button>
+      </div>
     </div>
   )
 }
 
-export default Edit1
+export default Add2;

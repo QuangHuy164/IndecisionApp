@@ -43,7 +43,7 @@ const router = createBrowserRouter([
   {
     path:'/add',
     element: <Add />
-  }
+  },
 ])
 
 const App = () => {

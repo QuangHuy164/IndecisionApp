@@ -22,7 +22,6 @@ const Name = () => {
     <div>
       <h1>Name</h1>
       <button onClick={onAdd}>Add</button>
-      {/* <button onClick={onNew}>NEW</button> */}
       <ol style={{width: 200, height: 100}}>
         {nameDescriptionArray.map((nameDescription, index) => {
           const key = `name-description-list-item-${v4()}`
@@ -37,9 +36,6 @@ const Name = () => {
           )
         })}
       </ol>
-
-      {/* <p>Description</p>
-      <button onClick={edit}>Edit</button> <button>Delete</button> */}
     </div>
   )
 }

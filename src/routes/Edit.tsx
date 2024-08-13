@@ -7,7 +7,7 @@ import {useNavigate} from 'react-router-dom'
 
 const Edit = () => {
   const dispatch = useDispatch()
-  const nameDescriptionArray = useSelector(getNameDescriptionArray)
+  const nameDescriptionArray = useSelector(getNameDescriptionArray) // useSelector for getting state that updated from Redux
     const editIndex = useSelector(getEditIndex)
     console.log(editIndex, nameDescriptionArray[editIndex])
 
