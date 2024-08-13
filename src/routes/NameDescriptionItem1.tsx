@@ -21,6 +21,8 @@ const NameDescriptionItem = (props: NameDescriptionProps) => {
     }
   return (
     <div>
+      <p>{props.name}</p>
+      <p>{props.description}</p>
       <button onClick={onEdit}>Edit</button>
       <button onClick={onDelete}>Delete</button>
     </div>

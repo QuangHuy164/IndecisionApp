@@ -1,4 +1,3 @@
-import { V4Options } from "uuid"
 
 export interface NameDescriptionReducer1 {
     nameDescriptionArray: NameDescription1[],

@@ -21,28 +21,34 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Name from './routes/Name'
 import Edit from './routes/Edit'
 import Add from './routes/Add'
+import Name1 from './routes/Name1'
+import Edit1 from './routes/Edit1'
+import Add1 from './routes/Add1'
 
 const router = createBrowserRouter([
+  // {
+  //   path: '/',
+  //   element: <Name />
+  // },
   {
     path: '/',
-    element: <Name />
-    //loader: rootLoader,
-    // action: Edit,
-    // children: [
-    //   {
-    //     path: '/edit',
-    //     element: <Edit />
-    //     // loader: nameLoader
-    //   }
-    // ]
+    element: <Name1 />
   },
+  // {
+  //   path: '/edit',
+  //   element: <Edit />
+  // },
   {
     path: '/edit',
-    element: <Edit />
+    element: <Edit1 />
   },
+  // {
+  //   path:'/add',
+  //   element: <Add />
+  // },
   {
     path:'/add',
-    element: <Add />
+    element: <Add1 />
   },
 ])
 

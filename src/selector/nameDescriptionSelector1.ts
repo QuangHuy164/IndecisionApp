@@ -1,20 +1,20 @@
 import {createSelector} from 'reselect'
 import {RootReducer} from '../types/rootReducer.type'
 
-const getNameDescriptionArray = (state: RootReducer) => {
-  state.nameDescriptionReducer1
+const getNameDescriptionReducer = (state: RootReducer) => {
+  return state.nameDescriptionReducer1
 }
 
-export const getNameDescriptionReducer = createSelector(
-  getNameDescriptionArray,
+export const getNameDescriptionArray = createSelector(
+  getNameDescriptionReducer,
   (nameDescriptionReducer1) => {
-    return nameDescriptionReducer1
+    return nameDescriptionReducer1.nameDescriptionArray
   }
 )
 
 export const getEditIndex = createSelector(
   getNameDescriptionReducer,
-  (nameDescriptionReducer) => {
-    return nameDescriptionReducer
+  (nameDescriptionReducer1) => {
+    return nameDescriptionReducer1.editIndex
   }
 )

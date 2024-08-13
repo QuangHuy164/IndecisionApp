@@ -29,7 +29,7 @@ const nameDescriptionReducer = (
       case UPDATE_EDIT_INDEX:
       state = {...state}
       state.editIndex = action.payload
-      console.log('edit',state.editIndex)
+      // console.log('edit',state.editIndex)
       return state
 
     default:

@@ -4,6 +4,7 @@ import {NameDescription} from '../types/nameDescription.types'
 import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
+import { NameDescription1 } from '@/types/nameDescription1.type'
 
 const Add1 = () => {
   const dispatch = useDispatch()
@@ -16,14 +17,13 @@ const Add1 = () => {
 
   const onSave = () => {
      navigate('/')
-    
     const newNameDescriptionArray = [...nameDescriptionArray]
-    const nameDescription: NameDescription = {
+    const newNameDescription : NameDescription1 = {
       name: nameInput,
       description: descriptionInput
-    }
-    newNameDescriptionArray.push(nameDescription)
-    dispatch(saveNameDescription(newNameDescriptionArray))
+    } 
+    newNameDescriptionArray.push(newNameDescription)
+   dispatch(saveNameDescription(newNameDescriptionArray))
   }
   const onCancel = () => {
     navigate('/')
