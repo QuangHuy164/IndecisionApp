@@ -1,5 +1,8 @@
-import { getEditIndex, getNameDescriptionArray} from '../selector/nameDescriptionSelector'
-import { saveNameDescription} from '../action/nameDescriptionAction'
+import {
+  getEditIndex,
+  getNameDescriptionArray
+} from '../selector/nameDescriptionSelector'
+import {saveNameDescription} from '../action/nameDescriptionAction'
 import {NameDescription} from '../types/nameDescription.types'
 import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
@@ -8,15 +11,14 @@ import {useNavigate} from 'react-router-dom'
 const Add2 = () => {
   const dispatch = useDispatch()
   const nameDescriptionArray = useSelector(getNameDescriptionArray)
-    
+
   const navigate = useNavigate()
   const [nameInput, setnameInput] = useState('')
   const [descriptionInput, setDescriptionInput] = useState('')
 
-
   const onSave = () => {
-     navigate('/')
-    
+    navigate('/')
+
     const newNameDescriptionArray = [...nameDescriptionArray]
     const nameDescription: NameDescription = {
       name: nameInput,
@@ -34,7 +36,7 @@ const Add2 = () => {
       <input
         value={nameInput}
         onChange={(e) => {
-          setnameInput(e.target.value)  
+          setnameInput(e.target.value)
         }}></input>
       <div style={{height: 20}} />
       <label>Description</label>
@@ -52,4 +54,4 @@ const Add2 = () => {
   )
 }
 
-export default Add2;
+export default Add2

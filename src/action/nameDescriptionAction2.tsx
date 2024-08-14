@@ -16,3 +16,11 @@ export const deleteNameDescriptionArray = (index:number) => {
         payload: index
     }
 }
+
+export const UPDATE_EDIT_INDEX = 'UPDATE_EDIT_INDEX'
+export const updateEditIndex = (index: number) => {
+    return {
+        type: UPDATE_EDIT_INDEX,
+        payload: index
+    }
+}

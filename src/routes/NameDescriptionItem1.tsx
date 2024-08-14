@@ -1,24 +1,27 @@
-import { deleteNameDescription, updateEditIndex } from '../action/nameDescriptionAction'
+import {
+  deleteNameDescription,
+  updateEditIndex
+} from '../action/nameDescriptionAction'
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import {useDispatch} from 'react-redux'
+import {useNavigate} from 'react-router-dom'
 
 interface NameDescriptionProps {
-    name:string
-    description: string
-    index: number
+  name: string
+  description: string
+  index: number
 }
 
 const NameDescriptionItem = (props: NameDescriptionProps) => {
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-    const onEdit = () => {
-        navigate('/edit')
-        dispatch(updateEditIndex(props.index))
-    }
-    const onDelete = () => {
-        dispatch(deleteNameDescription(props.index))
-    }
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const onEdit = () => {
+    navigate('/edit')
+    dispatch(updateEditIndex(props.index))
+  }
+  const onDelete = () => {
+    dispatch(deleteNameDescription(props.index))
+  }
   return (
     <div>
       <p>{props.name}</p>
