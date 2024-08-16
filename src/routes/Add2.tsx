@@ -1,5 +1,4 @@
 import {
-  getEditIndex,
   getNameDescriptionArray
 } from '../selector/nameDescriptionSelector2'
 import {saveNameDescriptionArray} from '../action/nameDescriptionAction2'

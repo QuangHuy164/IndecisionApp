@@ -23,7 +23,7 @@ const Edit2 = () => {
     const newItem: NameDescription2 = {
       name: nameInput,
       description: descriptionInput
-    }
+    } 
 
     newNameDescriptionArray[editIndex] = newItem
 
@@ -37,7 +37,7 @@ const Edit2 = () => {
     setDescriptionInput(nameDescriptionArray[editIndex].description)
   }, [nameDescriptionArray])
   return (
-    <div>
+    <div style={{display: 'flex', flexDirection: 'column', width: 200}}>  
       <p>Name</p>
       <input
         value={nameInput}
@@ -52,8 +52,11 @@ const Edit2 = () => {
           setDescriptionInput(e.target.value)
         }}
       />
+      <div style={{height:20}}/>
+      <div style={{display:'flex', justifyContent:'space-between'}}>
       <button onClick={onEdit}>Confirm changes</button>
       <button onClick={onCancel}>Cancel</button>
+      </div>
     </div>
   )
 }

@@ -23,11 +23,13 @@ const NameDescriptionItem2 = (props: NameDescriptionProps) => {
     dispatch(deleteNameDescriptionArray(props.index))
   }
   return (
-    <div>
+    <div style={{backgroundColor:'ghostwhite'}}>
       <p>{props.name}</p>
       <p>{props.description}</p>
+      <div style={{display:'flex', justifyContent:'space-between'}}>
       <button onClick={onEdit}>Edit</button>
       <button onClick={onDelete}>Delete</button>
+      </div>
     </div>
   )
 }

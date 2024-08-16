@@ -1,6 +1,6 @@
 import {
-  UPDATE_EDIT_INDEX,
-  DELETE_NAME,
+  UPDATE_EDIT_INDEX_2,
+  DELETE_NAME_2,
   SAVE_NAME_2
 } from '../action/nameDescriptionAction2'
 import {NameDescriptionReducer2} from '../types/nameDescription2.type'
@@ -19,7 +19,7 @@ const nameDescriptionReducer2 = (
       state.nameDescriptionArray = action.payload
       return state
 
-    case DELETE_NAME:
+    case DELETE_NAME_2:
       state = {...state}
       state.nameDescriptionArray = state.nameDescriptionArray.filter(
         (nameDescription, index) => {
@@ -28,7 +28,7 @@ const nameDescriptionReducer2 = (
       )
       return state
 
-    case UPDATE_EDIT_INDEX:
+    case UPDATE_EDIT_INDEX_2:
       state = {...state}
       state.editIndex = action.payload
       return state

@@ -20,11 +20,11 @@ const Edit = () => {
      navigate('/')
     
     const newNameDescriptionArray = [...nameDescriptionArray]
-    const nameDescription: NameDescription = {
+    const newItem: NameDescription = {
       name: nameInput,
       description: descriptionInput
     }
-    newNameDescriptionArray.push(nameDescription)
+    newNameDescriptionArray[editIndex] = newItem
     dispatch(saveNameDescription(newNameDescriptionArray))
     
 
@@ -49,7 +49,7 @@ const Edit = () => {
         }}></input>
       <div style={{height: 20}} />
       <div style={{display: 'flex', justifyContent: 'space-between'}}>
-        <button onClick={onSave}>Save</button>
+        <button onClick={onSave}>Confirm</button>
         <button onClick={onCancel}>Cancel</button>
       </div>
     </div>

@@ -8,18 +8,18 @@ export const saveNameDescription = (a: NameDescription[]) => {
   }
 }
 
-export const DELETE_NAME = 'DELETE_NAME'
+export const DELETE_NAME_1 = 'DELETE_NAME_1'
 export const deleteNameDescription = (index: number) => {
   return {
-    type: DELETE_NAME,
+    type: DELETE_NAME_1,
     payload: index
   }
 }
 
-export const UPDATE_EDIT_INDEX = 'UPDATE_EDIT_INDEX'
+export const UPDATE_EDIT_INDEX_1 = 'UPDATE_EDIT_INDEX_1'
 export const updateEditIndex = (index: number) => {
   return {
-    type: UPDATE_EDIT_INDEX,
+    type: UPDATE_EDIT_INDEX_1,
     payload: index
   }
 }

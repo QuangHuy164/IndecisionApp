@@ -1,11 +1,12 @@
 import {
   getNameDescriptionArray
 } from '../selector/nameDescriptionSelector1'
-import {updateEditIndex} from '../action/nameDescriptionAction'
+import {saveNameDescription, updateEditIndex} from '../action/nameDescriptionAction'
 import {getEditIndex} from '../selector/nameDescriptionSelector'
 import React, {useEffect, useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
+import { NameDescription1 } from '../types/nameDescription1.type'
 
 const Edit1 = () => {
   const dispatch = useDispatch()
@@ -16,7 +17,13 @@ const Edit1 = () => {
   const [descriptionInput, setDescriptionInput] = useState('')
   const onEdit = () => {
     navigate('/')
-  
+   const newNameDescriptionArray = [...nameDescriptionArray]
+   const newItem : NameDescription1 = {
+    name: nameInput,
+    description: descriptionInput
+   }
+   newNameDescriptionArray[editIndex] = newItem
+   dispatch(saveNameDescription(newNameDescriptionArray))
   }
   const onCancel = () => {
     navigate('/')
@@ -36,7 +43,7 @@ const Edit1 = () => {
           setNameInput(e.target.value)
         }}
       />
-      <button onClick={onEdit}>Edit</button>
+      <button onClick={onEdit}>Confirm</button>
       <p>Description</p>
       <input
         value={descriptionInput}
