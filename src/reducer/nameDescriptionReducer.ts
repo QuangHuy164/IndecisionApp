@@ -14,7 +14,6 @@ const nameDescriptionReducer = (
     case SAVE_NAME:
       state = {...state}
       state.nameDescriptionArray = action.payload
-      console.log(state.nameDescriptionArray)
       return state
 
     case DELETE_NAME:

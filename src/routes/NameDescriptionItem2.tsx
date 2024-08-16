@@ -1,5 +1,7 @@
-import {updateEditIndex} from '../action/nameDescriptionAction2'
-import {deleteNameDescriptionArray} from '../action/nameDescriptionAction2'
+import {
+  deleteNameDescriptionArray,
+  updateEditIndex
+} from '../action/nameDescriptionAction2'
 import React from 'react'
 import {useDispatch} from 'react-redux'
 import {useNavigate} from 'react-router-dom'

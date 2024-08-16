@@ -1,40 +1,49 @@
-import { getInputValue } from '../selector/nameDescriptionSelector1'
+import {
+  getNameDescriptionArray
+} from '../selector/nameDescriptionSelector1'
 import {updateEditIndex} from '../action/nameDescriptionAction'
 import {getEditIndex} from '../selector/nameDescriptionSelector'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
-import { updateInputValue } from '../action/nameDescriptionAction1'
-
 
 const Edit1 = () => {
   const dispatch = useDispatch()
   const editIndex = useSelector(getEditIndex)
+  const nameDescriptionArray = useSelector(getNameDescriptionArray)
   const navigate = useNavigate()
-  const inputValue = useSelector(getInputValue)
+  const [nameInput, setNameInput] = useState('')
   const [descriptionInput, setDescriptionInput] = useState('')
   const onEdit = () => {
     navigate('/')
-    dispatch(updateInputValue(inputValue))
+  
   }
   const onCancel = () => {
     navigate('/')
   }
+      
+  useEffect(() => {
+    const nameDescription = nameDescriptionArray[editIndex]
+    setDescriptionInput(nameDescription.description)
+    setNameInput(nameDescriptionArray[editIndex].name)
+  }, [])
   return (
     <div>
       <p>Name</p>
       <input
-        value={inputValue}
+        value={nameInput}
         onChange={(e) => {
-          dispatch(updateInputValue(e.target.value)
-  )}} />
+          setNameInput(e.target.value)
+        }}
+      />
       <button onClick={onEdit}>Edit</button>
       <p>Description</p>
       <input
         value={descriptionInput}
         onChange={(e) => {
           setDescriptionInput(e.target.value)
-        }} />
+        }}
+      />
       <button onClick={onCancel}>Cancel</button>
     </div>
   )

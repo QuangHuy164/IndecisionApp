@@ -1,10 +1,9 @@
 import { getNameDescriptionArray} from '../selector/nameDescriptionSelector'
 import { saveNameDescription} from '../action/nameDescriptionAction'
-import {NameDescription} from '../types/nameDescription.types'
 import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
-import { NameDescription1 } from '@/types/nameDescription1.type'
+import { NameDescription1 } from '../types/nameDescription1.type'
 
 const Add1 = () => {
   const dispatch = useDispatch()

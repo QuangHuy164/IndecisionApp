@@ -19,6 +19,3 @@ export const getEditIndex = createSelector(
   }
 )
 
-export const getInputValue = createSelector(getNameDescriptionReducer, (r) => {
-  return r.inputValue
-})

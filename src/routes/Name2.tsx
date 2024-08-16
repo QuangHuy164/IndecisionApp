@@ -14,6 +14,7 @@ const Name2 = () => {
   }
   return (
     <div>
+      <h1>Name</h1>
       <button onClick={onAdd}>ADD</button>
       <ol>
         {nameDescriptionArray.map((nameDescription, index) => {

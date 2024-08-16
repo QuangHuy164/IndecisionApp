@@ -24,31 +24,46 @@ import Add from './routes/Add'
 import Name1 from './routes/Name1'
 import Edit1 from './routes/Edit1'
 import Add1 from './routes/Add1'
+import Name2 from './routes/Name2'
+import Edit2 from './routes/Edit2'
+import Add2 from './routes/Add2'
 
 const router = createBrowserRouter([
   // {
   //   path: '/',
   //   element: <Name />
   // },
+  // {
+  //   path: '/',
+  //   element: <Name1 />
+  // },
   {
     path: '/',
-    element: <Name1 />
+    element: <Name2 />
   },
   // {
   //   path: '/edit',
   //   element: <Edit />
   // },
+  // {
+  //   path: '/edit',
+  //   element: <Edit1 />
+  // },
   {
     path: '/edit',
-    element: <Edit1 />
+    element: <Edit2 />
   },
   // {
   //   path:'/add',
   //   element: <Add />
   // },
+  // {
+  //   path:'/add',
+  //   element: <Add1 />
+  // },
   {
     path:'/add',
-    element: <Add1 />
+    element: <Add2 />
   },
 ])
 

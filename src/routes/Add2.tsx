@@ -1,8 +1,8 @@
 import {
   getEditIndex,
   getNameDescriptionArray
-} from '../selector/nameDescriptionSelector'
-import {saveNameDescription} from '../action/nameDescriptionAction'
+} from '../selector/nameDescriptionSelector2'
+import {saveNameDescriptionArray} from '../action/nameDescriptionAction2'
 import {NameDescription} from '../types/nameDescription.types'
 import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
@@ -10,22 +10,21 @@ import {useNavigate} from 'react-router-dom'
 
 const Add2 = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const nameDescriptionArray = useSelector(getNameDescriptionArray)
 
-  const navigate = useNavigate()
   const [nameInput, setnameInput] = useState('')
   const [descriptionInput, setDescriptionInput] = useState('')
 
   const onSave = () => {
     navigate('/')
-
     const newNameDescriptionArray = [...nameDescriptionArray]
     const nameDescription: NameDescription = {
       name: nameInput,
       description: descriptionInput
     }
     newNameDescriptionArray.push(nameDescription)
-    dispatch(saveNameDescription(newNameDescriptionArray))
+    dispatch(saveNameDescriptionArray(newNameDescriptionArray))
   }
   const onCancel = () => {
     navigate('/')
