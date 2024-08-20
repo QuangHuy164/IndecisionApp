@@ -12,10 +12,10 @@ const Name3 = () => {
     navigate('/add')
   }
   return (
-    <div>
+    <div >
       <h1>Name</h1>
       <button onClick={onAdd}>ADD</button>
-      <ol>
+      <ol style={{width:200, height:100}}>
         {nameDescriptionArray.map((nameDescription, index) => {
           const key = `${v4()}`
           return (

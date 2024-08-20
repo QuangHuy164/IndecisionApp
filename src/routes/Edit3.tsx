@@ -1,10 +1,11 @@
 import {NameDescription3} from '../types/nameDescription3.types'
 import {getNameDescriptionArray} from '../selector/nameDescriptionSelector3'
-import React, {useState} from 'react'
+import { useEffect, useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import { getEditIndex } from '../selector/nameDescriptionSelector3'
 import { saveNameDescription } from '../action/nameDescriptionAction3'
+import React from 'react'
 
 const Edit3 = () => {
     const dispatch  = useDispatch()
@@ -26,8 +27,14 @@ const Edit3 = () => {
   const onCancel = () => {
     navigate('/')
   }
+
+  useEffect(()=> {
+    setNameInput(nameDescriptionArray[editIndex].name),
+    setDescriptionInput(nameDescriptionArray[editIndex].description)
+  }, [])
+
   return (
-    <div>
+    <div style={{display:'flex', flexDirection:'column', width:200}}>
       <p>Name</p>
       <input
         value={nameInput}
@@ -42,8 +49,11 @@ const Edit3 = () => {
           setDescriptionInput(e.target.value)
         }}
       />
-      <button onClick={onEdit}>Edit</button>
+      <div style={{height:20}}/>
+      <div style={{display:'flex', justifyContent:'space-between'}}>
+      <button onClick={onEdit}>Confirm</button>
       <button onClick={onCancel}>Cancel</button>
+      </div>
     </div>
   )
 }

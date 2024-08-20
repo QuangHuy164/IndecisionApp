@@ -26,7 +26,7 @@ const Add3 = () => {
     navigate('/')
   }
   return (
-    <div>
+    <div style={{display:'flex', flexDirection:'column', width:200}}>
       <p>Name</p>
       <input
         value={nameInput}
@@ -41,8 +41,11 @@ const Add3 = () => {
           setDescriptionInput(e.target.value)
         }}
       />
+      <div style={{height:20}}></div>
+      <div style={{display:'flex', justifyContent:'space-between'}}>
       <button onClick={onEdit}>Edit</button>
       <button onClick={onCancel}>Cancel</button>
+      </div>
     </div>
   )
 }

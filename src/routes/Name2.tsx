@@ -12,7 +12,7 @@ const Name2 = () => {
     navigate('/add')
   }
   return (
-    <div style={{}}>
+    <div>
       <h1>Name</h1> 
       <button onClick={onAdd}>ADD</button>
       <ol style={{height:100,width:200}}>

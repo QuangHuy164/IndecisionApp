@@ -20,11 +20,13 @@ const onEdit = () => {
 const onDelete = () => {
     dispatch(deleteNameDescription(props.index))
 }
-    return <div>
+    return <div style={{backgroundColor:'lightcyan'}}>
         <p>{props.name}</p>
         <p>{props.description}</p>
+        <div style={{display:'flex',justifyContent:'space-between'}}>
         <button onClick={onEdit}>Edit</button>
         <button onClick={onDelete}>Delete</button>
+        </div>
     </div>
 }
 
